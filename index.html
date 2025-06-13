@@ -200,7 +200,7 @@
             </p>
             <ul style="list-style-type: disc; margin-left: 40px;margin-top: -0.5rem;">
               <li><strong> Supervised Fine-Tuning (SFT)</strong> aims to jointly learn reasoning & action and enable dual thinking capabilities, using ground-truth trajectory data and distilling high-quality reasoning data from a large-scale VLM model.</li>
-              <li><strong> Reinforcement Fine-Tuning (RFT)</strong> uses task-specific reward functions to optimize planning performance, while enables adaptive reasoning and improves its running efficiency by minimizing unnecessary reasoning.</li>
+              <li><strong> Reinforcement Fine-Tuning (RFT)</strong> uses task-specific reward functions to optimize planning performance while enabling adaptive reasoning and improving its running efficiency by minimizing unnecessary reasoning.</li>
             </ul>
           </div>
         </div>
@@ -232,12 +232,12 @@
             <h3 class="title is-4" style="text-align: left;">Data Scaling</h3>
             <div class="content has-text-justified">
               <p>
-                In this experiment, AutoVLA is trained on a mixture of the nuPlan and nuScenes datasets with varying training set sizes (10k, 50k, 100k, 185k). 
+                In this experiment, <span class="dnerf">AutoVLA</span> is trained on a mixture of the nuPlan and nuScenes datasets with varying training set sizes (10k, 50k, 100k, 185k). 
               </p>
               <ul style="list-style-type: disc; margin-left: 40px;margin-top: -0.5rem;">
                 <li style="margin-top: 1.5rem;">Increasing the amount of training data consistently improves planning performance.</li>
-                <li style="margin-top: 1rem;">Learning structured reasoning require enough training data and can further improve planning performance.</li>
-                <li style="margin-top: 1rem;">The action-only supervision yields better performance in simpler scenario datasets, such as nuScenes dataset.</li>
+                <li style="margin-top: 1rem;">Learning structured reasoning requires enough training data and can further improve planning performance.</li>
+                <li style="margin-top: 1rem;">The action-only supervision yields better performance in simpler scenario datasets, such as the nuScenes dataset.</li>
               </ul>
             </div>
           </div>
@@ -256,7 +256,7 @@
             We apply RFT to the full-data CoT reasoning model trained via SFT.
             <ul style="list-style-type: disc; margin-left: 40px;margin-top: -0.5rem;">
               <li>10.6% improvement in PDMS on the NAVSIM testing set and a 66.8% reduction in runtime (500 samples) with RFT.</li>
-              <li>Larger groups lead to better performance by promoting broader exploration of training samples.</li>
+              <li>Larger groups lead to better performance by promoting a broader exploration of training samples.</li>
               <li>RFT reduces unnecessary and slow reasoning in simple scenarios.</li>
             </ul>
           </p>
@@ -279,14 +279,14 @@
         <h3 class="title is-4" style="text-align: left;">Waymo End-to-End Driving Results</h3>
         <div class="content has-text-justified">
           <p>
-            In the <a href="https://waymo.com/open/challenges/2025/e2e-driving/" target="_blank">Waymo Vision-based End-to-End Driving Challenge</a> (as of May 22, 2025), AutoVLA ranks highly in both RFS Overall and ADE metrics and achieves the top score in the RFS Spotlight metric, which focuses on the most challenging scenarios
+            In the <a href="https://waymo.com/open/challenges/2025/e2e-driving/" target="_blank">Waymo Vision-based End-to-End Driving Challenge</a> (as of May 22, 2025), <span class="dnerf">AutoVLA</span> ranks highly in both RFS Overall and ADE metrics and achieves the top score in the RFS Spotlight metric, which focuses on the most challenging scenarios.
           </p>
           <div class="container is-max-desktop">
             <img src="./static/images/waymo_vis.png" alt="Waymo Visualization" style="width: 100%; max-width: 100%; height: auto; max-height: 115vh; object-fit: contain; margin-bottom: 1.2rem;">
           </div>
         </div>
 
-        <h3 class="title is-4" style="text-align: left;">CARLA Closed-loop Results</h3>
+        <h3 class="title is-4" style="text-align: left; margin-bottom: 2rem;">CARLA Closed-loop Results</h3>
         <div class="content has-text-justified">
           <div class="container is-max-desktop">
             <div class="columns is-multiline is-centered">
@@ -304,11 +304,11 @@
               </div>
               <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
                 <video src="./static/images/carla_cut_in.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
-                <div>Cut in at Night</div>
+                <div>Cut-in at Night</div>
               </div>
               <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
                 <video src="./static/images/carla_fog_lane_change.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
-                <div>Lane Change in Foggy Scenario</div>
+                <div>Lane Change in the Fog</div>
               </div>
               <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
                 <video src="./static/images/carla_stop_turn_left.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
