@@ -114,12 +114,12 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/Zewei-Zhou/AutoVLA"
+                <a href="https://github.com/ucla-mobility/AutoVLA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (Coming Soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -269,48 +269,61 @@
           </div>
         </div>
 
-        <h3 class="title is-4" style="text-align: left;">nuScenes Results</h3>
-        <div class="content has-text-justified">
-          <div class="container is-max-desktop">
-            <img src="./static/images/nusc_vis.png" alt="nuScenes Visualization" style="width: 100%; max-width: 100%; height: auto; max-height: 110vh; object-fit: contain; margin-bottom: 1.2rem;">
-          </div>
-        </div>
-
         <h3 class="title is-4" style="text-align: left;">Waymo End-to-End Driving Results</h3>
         <div class="content has-text-justified">
           <p>
             In the <a href="https://waymo.com/open/challenges/2025/e2e-driving/" target="_blank">Waymo Vision-based End-to-End Driving Challenge</a> (as of May 22, 2025), <span class="dnerf">AutoVLA</span> ranks highly in both RFS Overall and ADE metrics and achieves the top score in the RFS Spotlight metric, which focuses on the most challenging scenarios.
           </p>
           <div class="container is-max-desktop">
-            <img src="./static/images/waymo_vis.png" alt="Waymo Visualization" style="width: 100%; max-width: 100%; height: auto; max-height: 115vh; object-fit: contain; margin-bottom: 1.2rem;">
+            <img src="./static/images/waymo_vis.png" alt="Waymo Visualization" style="width: 100%; max-width: 100%; height: auto; max-height: 70vh; object-fit: contain; margin-bottom: 2rem;">
           </div>
         </div>
 
-        <h3 class="title is-4" style="text-align: left; margin-bottom: 2rem;">CARLA Closed-loop Results</h3>
+        <h3 class="title is-4" style="text-align: left; margin-bottom: 2rem; margin-top:2rem;">nuScenes Results</h3>
         <div class="content has-text-justified">
           <div class="container is-max-desktop">
-            <div class="columns is-multiline is-centered">
-              <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
+            <div class="columns is-centered is-multiline">
+              <div class="column is-full has-text-centered" style="padding: 0.5rem;">
+                <video class="nuscene-video" src="./static/images/nuscene_2.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
+              </div>
+              <div class="column is-full has-text-centered" style="padding: 0.5rem;">
+                <video class="nuscene-video" src="./static/images/nuscene_3.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
+              </div>
+              <div class="column is-full has-text-centered" style="padding: 0.5rem;">
+                <video class="nuscene-video" src="./static/images/nuscene_4.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
+              </div>
+              <div class="column is-full has-text-centered" style="padding: 0.5rem;">
+                <video class="nuscene-video" src="./static/images/nuscenes_1.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4" style="text-align: left; margin-bottom: 2rem; margin-top:4rem">CARLA Closed-loop Results</h3>
+        <div class="content has-text-justified">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered is-multiline">
+              <div class="column is-half has-text-centered" style="padding: 0.5rem;">
                 <video src="./static/images/carla_sudden_pedestrian_emergence.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
                 <div>Sudden Pedestrian Emergence</div>
               </div>
-              <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
+              <div class="column is-half has-text-centered" style="padding: 0.5rem;">
                 <video src="./static/images/carla_yeliding_pedestrian.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
                 <div>Yielding to Pedestrian</div>
               </div>
-              <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
+              <div class="column is-half has-text-centered" style="padding: 0.5rem;">
                 <video src="./static/images/carla_yeliding_cut_in.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
                 <div>Yielding to Cut-in Vehicle</div>
               </div>
-              <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
+              <div class="column is-half has-text-centered" style="padding: 0.5rem;">
                 <video src="./static/images/carla_cut_in.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
                 <div>Cut-in at Night</div>
               </div>
-              <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
+              <div class="column is-half has-text-centered" style="padding: 0.5rem;">
                 <video src="./static/images/carla_fog_lane_change.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
-                <div>Lane Change in the Fog</div>
+                <div>Lane Change in Fog</div>
               </div>
-              <div class="column is-one-third has-text-centered" style="padding: 0.25rem;">
+              <div class="column is-half has-text-centered" style="padding: 0.5rem;">
                 <video src="./static/images/carla_stop_turn_left.mp4" controls autoplay loop muted playsinline style="width: 100%;"></video>
                 <div>Stop at the Stop Sign</div>
               </div>
@@ -344,6 +357,15 @@
     The website design was adapted from <a href="https://nerfies.github.io/">nerfies</a>.
   </p>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var videos = document.querySelectorAll('.nuscene-video');
+    videos.forEach(function(video) {
+      video.playbackRate = 1.2;
+    });
+  });
+</script>
 
 </body>
 </html>
